@@ -30,20 +30,3 @@ for production
 ### firebase deploy 
 for pubblication
 
-
-
-<!--         /* let tl2 = gsap.timeline({
-            defaults: { duration: 2, ease: Power1.easeOut },
-        }); */
-        /*  tl.to(
-             servizio_01, {
-                 y: "-150%",
-                 x: "70%",
-             },
-             "+2"
-         ); */
-        /* setTimeout(() => {
-            tl2.to(servizio_02, {
-                opacity: 1,
-            });
-        }, 2000); */ -->
