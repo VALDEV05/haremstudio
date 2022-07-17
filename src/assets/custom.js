@@ -20,6 +20,12 @@ function init() {
     redirectSection("#header-menu", ".chi-siamo-menu", "#chi-siamo");
     keywordAnimation();
     newVinile();
+    draggableImg();
+    gsap.config({
+        nullTargetWarn: false,
+
+    });
+
 }
 
 function consoleLogAuthor() {
@@ -228,4 +234,14 @@ function servicesDisplay(idServices) {
     var services = jQuery(idServices);
     console.log(services);
 }
+
+function draggableImg() {
+    jQuery('img').mousedown(() => {
+        return false;
+    })
+}
+
+
+
+
 jQuery(document).ready(init);

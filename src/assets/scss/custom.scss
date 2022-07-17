@@ -118,28 +118,8 @@ p {
     background-color: transparent !important;
 }
 
-h1 {
-    font-size: 90px;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 62px;
-    font-weight: 700;
-}
-
-h3 {
-    font-size: 30px;
-    font-weight: 700;
-}
-
-h4 {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-a:focus {
-    outline-style: none;
+input:focus {
+    outline: none;
 }
 
 svg {
@@ -215,6 +195,11 @@ $width-container: 85%;
             &>* {
                 display: flex;
                 align-items: center;
+            }
+        }
+        .menu-item {
+            &:hover {
+                cursor: pointer;
             }
         }
     }
