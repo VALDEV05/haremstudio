@@ -196,8 +196,13 @@ $width-container: 85%;
                 display: flex;
                 align-items: center;
             }
+            &.mobile {
+                display: none;
+            }
         }
         .menu-item {
+            display: flex;
+            align-items: center;
             &:hover {
                 cursor: pointer;
             }
