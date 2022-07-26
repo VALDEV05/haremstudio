@@ -21,6 +21,7 @@ function init() {
     keywordAnimation();
     newVinile();
     draggableImg();
+    toggleMenuMobile();
     gsap.config({
         nullTargetWarn: false,
 
@@ -30,6 +31,45 @@ function init() {
 
 function consoleLogAuthor() {
     console.log("Valerio Corda");
+}
+
+function toggleMenuMobile() {
+    const menuToggleOpen = jQuery("#hambuerger-menu");
+    const menuToggleClose = jQuery("#menu-toggle-close");
+    const body = jQuery("body");
+    const tl = gsap.timeline({
+        paused: true,
+    });
+    tl.to(".menu-footer-left", {
+        x: 0,
+        duration: 1.2,
+        ease: "expo.inOut",
+    });
+
+    tl.from(".menu-footer-left nav a", {
+        y: 40,
+        opacity: 0,
+        duration: 0.6,
+        ease: "expo.out",
+        stagger: 0.5,
+    });
+
+    tl.from(".social", {
+        y: 40,
+        opacity: 0,
+        duration: 0.4,
+        ease: "expo.out",
+    });
+    jQuery(menuToggleOpen).click(function() {
+        tl.play();
+        console.log('aperto');
+
+        body.css("overflow-y", "hidden");
+    });
+    jQuery(menuToggleClose).click(function() {
+        tl.reverse();
+        body.css("overflow-y", "scroll");
+    });
 }
 /* MENU ANIMATION */
 function animateMenu() {

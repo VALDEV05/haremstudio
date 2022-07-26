@@ -693,8 +693,14 @@ $width-container: 85%;
 
 /* Small applies to x-small devices (portrait phones, less than 576px) */
 
-
-/* @media (max-width: 575.98px) {} */
+@media (max-width: 575.98px) {
+    .menu-top-header.mobile {
+        display: flex!important;
+        &>div {
+            width: fit-content;
+        }
+    }
+}
 
 
 /* Small applies to x-small devices (portrait phones, less than 321px) */

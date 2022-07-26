@@ -1,90 +1,23 @@
 <template>
   <header id="top-header">
     <div class="col-full">
-      <div class="menu-top-header desktop">
-        <div class="left-menu">
-          <div id="menu-item-1" class="menu-item">
-            <div class="icon-wrap">
-              <icon_position></icon_position>
-            </div>
-            Via Antonio Maria Lorgna 22 - 00143 - RM
-          </div>
-          <!-- /#menu-item-1 -->
-          <div id="menu-item-2" class="menu-item">
-            <div class="icon-wrap">
-              <icon_clock></icon_clock>
-            </div>
-            Lun - Ven 10.00/19.00
-          </div>
-          <!-- /#menu-item-2 -->
-          <div id="menu-item-3" class="menu-item sendEmailHarem">
-            <div class="icon-wrap">
-              <icon_mail></icon_mail>
-            </div>
-            studio@millenarigroup.com
-          </div>
-          <!-- /#menu-item-3 -->
-        </div>
-        <!-- /.left-menu -->
-        <div class="right-menu">
-          <a class="btn btn-lg btn-contattaci-top-header">
-            PRENOTA UNA SESSIONE
-          </a>
-          <!-- /.btn-contattaci-top-header -->
-        </div>
-        <!-- /.right-menu -->
-      </div>
+      <TopHeaderDesktop></TopHeaderDesktop>
       <!-- /.menu-top-header desktop-->
-      <div class="menu-top-header mobile">
-        <div class="left-menu">
-          <div id="menu-item-1" class="menu-item">
-            <div class="icon-wrap">
-              <icon_position></icon_position>
-            </div>
-          </div>
-          <!-- /#menu-item-1 -->
-          <div id="menu-item-2" class="menu-item">
-            <div class="icon-wrap">
-              <icon_clock></icon_clock>
-            </div>
-          </div>
-          <!-- /#menu-item-2 -->
-          <div id="menu-item-3" class="menu-item sendEmailHarem">
-            <div class="icon-wrap">
-              <icon_mail></icon_mail>
-            </div>
-          </div>
-          <!-- /#menu-item-3 -->
-        </div>
-        <!-- /.left-menu -->
-        <div class="right-menu">
-          <a class="btn btn-lg btn-contattaci-top-header">
-            <!-- PRENOTA UNA SESSIONE -->
-            <div class="icon-wrap">
-              <icon_calendar></icon_calendar>
-            </div>
-          </a>
-          <!-- /.btn-contattaci-top-header -->
-        </div>
-        <!-- /.right-menu -->
-      </div>
-      <!-- /.menu-top-header mobile-->
+      <TopHeaderMobile></TopHeaderMobile>
+      
     </div>
   </header>
   <!-- /#top-header -->
 </template>
 
 <script>
-import icon_mail from "./icon/icon_mail.vue";
-import icon_clock from "./icon/icon_clock.vue";
-import icon_position from "./icon/icon_position.vue";
-import icon_calendar from "./icon/icon_calendar.vue";
+import TopHeaderMobile from "./TopHeaderMobile.vue";
+import TopHeaderDesktop from "./TopHeaderDesktop.vue";
+/* import icon_calendar from "./icon/icon_calendar.vue"; */
 export default {
   components: {
-    icon_mail,
-    icon_clock,
-    icon_calendar,
-    icon_position,
+    TopHeaderDesktop,
+    TopHeaderMobile
   },
 };
 </script>
