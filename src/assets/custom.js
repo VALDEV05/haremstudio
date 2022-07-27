@@ -62,8 +62,6 @@ function toggleMenuMobile() {
     });
     jQuery(menuToggleOpen).click(function() {
         tl.play();
-        console.log('aperto');
-
         body.css("overflow-y", "hidden");
     });
     jQuery(menuToggleClose).click(function() {
@@ -244,9 +242,9 @@ function singleRotationObject(params, duration, rotation, frequency) {
         for (let index = 0; index < array.length; index++) {
             const element = array[index];
             if (!isNumber(element)) {
-                /*  element.push(newArray);
-                 return newArray; */
-                console.log(element, 'numero');
+                /*  element.push(newArray);*/
+                return newArray;
+                /* console.log(element, 'numero'); */
 
             }
 
@@ -255,9 +253,9 @@ function singleRotationObject(params, duration, rotation, frequency) {
         function isNumber(n) {
             return !isNaN(parseFloat(n)) && !isNaN(n - 0)
         }
-        console.log(newArray);
+        /* console.log(newArray); */
 
-        console.log(array /* .splice(1, 3) */ );
+        /* console.log(array .splice(1, 3)  ); */
         if (count >= 3) {
             count = 0;
         }
