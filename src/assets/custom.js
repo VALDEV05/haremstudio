@@ -1,4 +1,4 @@
-import { gsap, Power1 /* , Bounce */ } from "gsap";
+import { gsap, /* Power1 */ /* , Bounce */ } from "gsap";
 import { TimelineMax } from "gsap/gsap-core";
 import jQuery from "jquery";
 import { TweenMax } from "gsap/gsap-core";
@@ -19,14 +19,12 @@ function init() {
     );
     redirectSection("#header-menu", ".chi-siamo-menu", "#chi-siamo");
     keywordAnimation();
-    newVinile();
     draggableImg();
     toggleMenuMobile();
+
     gsap.config({
         nullTargetWarn: false,
-
     });
-
 }
 
 function consoleLogAuthor() {
@@ -110,21 +108,6 @@ function animateMenu() {
         });
     });
 }
-/* ANIMATION VINILE */
-/* function controlVinile() {
-     var vinile = jQuery(".vinile");
-     var servizio_01 = jQuery("#servizio-01");
-     let count = 0;
-
-     let tl = gsap.timeline({ defaults: { duration: 3, ease: Power1.easeOut } });
-     jQuery("#prev").click(function() {
-         count = count + 1;
-         tl.to(vinile, { rotation: "+=120" }, "+=1").to(
-             servizio_01, { y: "-100%", x: "70%" },
-             "+1"
-         );
-     });
- } */
 /* ScrollToTop */
 function scrolltToTop() {
     jQuery("#back-top").click(function() {
@@ -188,7 +171,18 @@ function parallaxIt(e, target, movement, container) {
         y: ((relY - $this.height() / 2) / $this.height()) * movement,
     });
 }
-
+/* Function to blog drag on element */
+function draggableImg() {
+    jQuery('img').mousedown(() => {
+        return false;
+    });
+    jQuery('svg').mousedown(() => {
+        return false;
+    });
+    jQuery('a').mousedown(() => {
+        return false;
+    })
+}
 /* Function keywordAnimation() */
 function keywordAnimation() {
     var pageWidth = jQuery(window).width();
@@ -218,72 +212,7 @@ function keywordAnimation() {
     }
 }
 
-function newVinile() {
-    singleRotationObject(".vinile", "1", "+=120", "4000");
-}
-/* function to rotate object */
-function singleRotationObject(params, duration, rotation, frequency) {
-    var newObjectToturn = jQuery(params);
 
-    let tl = gsap.timeline({
-        defaults: { duration: duration, ease: Power1.easeInOut },
-    });
-    var count = '0';
-    setInterval(() => {
-        tl.to(
-            newObjectToturn, {
-                rotation: rotation,
-            },
-            "+=0"
-        );
-        /* Counter per capire in che posizione mi trovo */
-        var array = rotation.split('');
-        var newArray = [];
-        for (let index = 0; index < array.length; index++) {
-            const element = array[index];
-            if (!isNumber(element)) {
-                /*  element.push(newArray);*/
-                return newArray;
-                /* console.log(element, 'numero'); */
-
-            }
-
-        }
-
-        function isNumber(n) {
-            return !isNaN(parseFloat(n)) && !isNaN(n - 0)
-        }
-        /* console.log(newArray); */
-
-        /* console.log(array .splice(1, 3)  ); */
-        if (count >= 3) {
-            count = 0;
-        }
-        count++;
-        /* Chiamata di funzione dinamica per selezionare il servizio corrispondente */
-        servicesDisplay('#servizio-0' + count)
-
-    }, frequency);
-}
-
-
-
-function servicesDisplay(idServices) {
-    var services = jQuery(idServices);
-    console.log(services);
-}
-
-function draggableImg() {
-    jQuery('img').mousedown(() => {
-        return false;
-    });
-    jQuery('svg').mousedown(() => {
-        return false;
-    });
-    jQuery('a').mousedown(() => {
-        return false;
-    })
-}
 
 
 
