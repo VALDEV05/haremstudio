@@ -29,8 +29,8 @@
 
 /* COLORS */
 
-$white: #000;
-$black: #fff;
+$white: #fff;
+$black: #121212;
 $dark: #333;
 $primary-font-strano: "Merriweather",
 serif;
@@ -173,7 +173,7 @@ $width-container: 85%;
 #site-header {
     height: 90vh;
     width: 100vw;
-    background-color: $white;
+    background-color: $black;
     position: relative;
     #top-header {
         * {
@@ -181,7 +181,7 @@ $width-container: 85%;
         }
         height: $height-top-header;
         width: 100%;
-        background-color: $black;
+        background-color: $white;
         /* @include gradientTopHeader; */
         position: fixed;
         display: flex;
@@ -189,7 +189,7 @@ $width-container: 85%;
         .menu-top-header {
             display: flex;
             justify-content: space-between;
-            color: $white;
+            color: $black;
             &>div {
                 gap: 20px;
             }
@@ -199,6 +199,14 @@ $width-container: 85%;
             }
             &.mobile {
                 display: none;
+            }
+            &.desktop {
+                .right-menu {
+                    .btn-contattaci-top-header {
+                        border: 1px solid $black;
+                        border-radius: 75px;
+                    }
+                }
             }
         }
         .menu-item {
@@ -211,9 +219,10 @@ $width-container: 85%;
     }
     #main-header {
         position: relative;
-        height: 90vh;
+        height: 100vh;
         width: 100vw;
-        background-color: $white;
+        padding-top: $height-top-header;
+        background-color: $black;
         &>.row {
             height: 100%;
             width: 100%;
@@ -221,9 +230,18 @@ $width-container: 85%;
         }
         #header-menu {
             margin: calc($height-top-header + 4px) auto;
+            #logo-small {
+                max-width: 350px;
+                max-height: 180px;
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
             .animate-menu {
                 margin: 20px 0;
                 a {
+                    color: $white;
                     font-size: 25px;
                 }
                 span.underline {
@@ -233,7 +251,7 @@ $width-container: 85%;
                     left: 0;
                     width: 0;
                     height: calc(1px + 0.6vw);
-                    background-color: $black;
+                    background-color: $white;
                     z-index: -1;
                 }
             }
@@ -273,14 +291,14 @@ $width-container: 85%;
                         .titolo-servizio {
                             a {
                                 width: fit-content;
-                                font-style: italic;
                                 font-size: 40px;
                                 font-family: $primary-font-strano;
                                 text-transform: uppercase;
                                 margin-left: -20%;
                                 margin-top: 16px;
                                 display: block;
-                                border-bottom: 2px solid $black;
+                                border-bottom: 2px solid $white;
+                                color: $white;
                             }
                         }
                     }
@@ -344,7 +362,6 @@ $width-container: 85%;
                             color: $white;
                         }
                         h3 {
-                            font-style: italic;
                             font-weight: 600;
                             letter-spacing: 1.4px;
                         }
@@ -359,7 +376,7 @@ $width-container: 85%;
                             margin-top: 4%;
                             .btn-harem-outline {
                                 font-family: "Roboto", serif;
-                                border: 1px solid #fff;
+                                border: 1px solid $white;
                                 border-radius: 25px;
                                 padding: 8px 30px;
                                 font-weight: 400;
@@ -386,7 +403,7 @@ $width-container: 85%;
                                     font-family: $secondary-font-roboto;
                                     text-decoration: none;
                                     color: transparent;
-                                    -webkit-text-stroke: 4px #fff;
+                                    -webkit-text-stroke: 4px $white;
                                     transition: 0.1s ease;
                                     text-transform: uppercase;
                                     &:hover {
@@ -473,17 +490,20 @@ $width-container: 85%;
     position: relative;
     margin-top: 128px;
     #back-top {
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 70px;
-        width: 70px;
-        background-color: $black;
-        display: flex;
-        justify-content: center;
-        align-items: top;
-        padding-top: 10px;
+        .icona {
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &>svg {
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            max-width: 20%;
+            max-height: 100%;
+        }
     }
     .col-full {
         height: 100%;

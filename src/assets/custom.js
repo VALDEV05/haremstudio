@@ -276,6 +276,12 @@ function servicesDisplay(idServices) {
 function draggableImg() {
     jQuery('img').mousedown(() => {
         return false;
+    });
+    jQuery('svg').mousedown(() => {
+        return false;
+    });
+    jQuery('a').mousedown(() => {
+        return false;
     })
 }
 

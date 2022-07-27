@@ -6,7 +6,7 @@
         <div id="header-menu" class="col-md-4">
           <div class="col-full">
             <div id="logo-small">
-              <img src="../assets/upload/img/logo_small.png" alt="" />
+              <img src="../assets/upload/img/script-white-total.png" alt="" />
             </div>
             <MenuHeader></MenuHeader>
           </div>
