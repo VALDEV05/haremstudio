@@ -1,11 +1,14 @@
-import { gsap /* Power1 */ /* , Bounce */ } from "gsap";
+import { gsap /* Power1 */ /* , Bounce */ , /* Linear */ } from "gsap";
 import { TimelineMax } from "gsap/gsap-core";
 import jQuery from "jquery";
 import { TweenMax } from "gsap/gsap-core";
+/* import { Draggable } from "gsap/Draggable"; */
+/* import { TweenLite, TimelineLite } from 'gsap'; */
 
 function init() {
     gsap.registerPlugin("TweenMax");
     gsap.registerPlugin("TimelineMax");
+    /* gsap.registerPlugin(Draggable); */
     consoleLogAuthor();
     animateMenu();
     /* controlVinile(); */
@@ -23,6 +26,7 @@ function init() {
     toggleMenuMobile();
     pageLoader();
     counter();
+    /* porcatroia(); */
     gsap.config({
         nullTargetWarn: false,
     });
@@ -216,10 +220,10 @@ function keywordAnimation() {
 function pageLoader() {
     var pageLoader = jQuery("#page-loader");
     console.log(pageLoader);
-    /* setTimeout(() => {
-            pageLoader.addClass('rimuovi');
+    setTimeout(() => {
+        pageLoader.addClass('rimuovi');
 
-        }, 5000); */
+    }, 3000);
 }
 
 function counter() {
@@ -233,8 +237,37 @@ function counter() {
     function task(i) {
         setTimeout(function() {
             span.text(i);
-        }, 70 * i);
+        }, 30 * i);
     }
 }
 
+/* function porcatroia() {
+    var nav6 = jQuery('#change').children('.holder').each(function(i) {
+        TweenLite.set(this, { rotation: 30 * i });
+    }).end();
+
+    var tl = new TimelineLite({ paused: true });
+    var nav = document.getElementById('change')
+
+    var gorilla = gsap.to(nav, 60, { rotation: "360", ease: Linear.easeNone, repeat: -1 });
+
+
+
+
+    jQuery(document).on("mouseenter", ".holder img", function() {
+        tl.pause();
+    }).on("mouseleave", ".holder a", function() {
+        tl.play();
+    });
+
+
+    const draggable = Draggable.create("#change", {
+        type: "rotation",
+        inertia: true,
+        onDrag: function() {
+            gorilla.pause
+        }
+    });
+    console.log(nav6, draggable);
+} */
 jQuery(document).ready(init);
