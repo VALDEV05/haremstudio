@@ -11,11 +11,8 @@
 *  5.0 - Header
 *  6.0 - Footer
 *  7.0 - Home
-*    7.1 - Hero
-*    7.2 - Newsletter
-*    7.2 - Instagram Feed
 *  8.0 - Page Loader 
-*
+*  9.0 - Contatti
 ***
 */
 
@@ -560,6 +557,28 @@ $width-container: 85%;
     &.rimuovi {
         transform: translateY(-100vh);
         transition: all 2s;
+    }
+}
+
+
+/* ==========================================================================
+   9.0 - Contatti
+   ========================================================================== */
+
+#contatti {
+    .custom-container {
+        .row {
+            .col-md-4 {
+                img {
+                    width: 100%;
+                }
+                .title-contatti {
+                    font-family: $primary-font-strano;
+                    font-weight: 700;
+                    font-size: 42px;
+                }
+            }
+        }
     }
 }
 

@@ -145,10 +145,16 @@ function redirectGoogleMaps() {
     var indirizzo =
         "https://www.google.it/maps/place/Via+Antonio+Maria+Lorgna,+22,+00143+Roma+RM/@41.8248262,12.5043733,16.43z/data=!4m13!1m7!3m6!1s0x13258bca7b7a55b5:0xfc5461eddcf7cdf1!2sVia+Antonio+Maria+Lorgna,+22,+00143+Roma+RM!3b1!8m2!3d41.8242585!4d12.5076442!3m4!1s0x13258bca7b7a55b5:0xfc5461eddcf7cdf1!8m2!3d41.8242585!4d12.5076442";
     var button = jQuery("#top-header").find("#menu-item-1");
+    var button2 = jQuery('#contatti').find('#map');
     button.mouseenter().css("cursor", "pointer");
     button.click(function() {
         window.open(indirizzo);
     });
+    button2.mouseenter().css("cursor", "pointer");
+    button2.click(function() {
+        window.open(indirizzo);
+    });
+
 }
 
 /* Redirect Serviczio */
@@ -219,7 +225,6 @@ function keywordAnimation() {
 
 function pageLoader() {
     var pageLoader = jQuery("#page-loader");
-    console.log(pageLoader);
     setTimeout(() => {
         pageLoader.addClass('rimuovi');
 
