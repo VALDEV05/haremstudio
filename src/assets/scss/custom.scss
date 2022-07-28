@@ -253,7 +253,57 @@ $width-container: 85%;
         }
         .vinile-wrap-container {
             position: relative;
-            .vinile-wrap {
+            /* .vinile-wrap {
+                position: absolute;
+                right: -15%;
+                top: 50%;
+                transform: translateY(-50%);
+                .servizi-wrap {
+                    position: relative;
+                    z-index: 99;
+                    #servizio-01,
+                    #servizio-02,
+                    #servizio-03 {
+                        position: absolute;
+                        top: 50%;
+                        left: -75%;
+                        transform: translate(50%, -50%);
+                        .testo-servizio {
+                            width: fit-content;
+                            position: absolute;
+                            text-align: right;
+                            color: rgba(255, 255, 255, 0.7);
+                            left: -55%;
+                            font-family: $primary-font-strano;
+                            .numero {
+                                font-size: 213px;
+                            }
+                            .nome {
+                                font-size: 82px;
+                                margin-top: -102px;
+                            }
+                        }
+                        .titolo-servizio {
+                            a {
+                                width: fit-content;
+                                font-size: 40px;
+                                font-family: $primary-font-strano;
+                                text-transform: uppercase;
+                                margin-left: -20%;
+                                margin-top: 16px;
+                                display: block;
+                                border-bottom: 2px solid $white;
+                                color: $white;
+                            }
+                        }
+                    }
+                    #servizio-02,
+                    #servizio-03 {
+                        opacity: 0;
+                    }
+                }
+            } */
+            .vinile-wrap2 {
                 position: absolute;
                 right: -15%;
                 top: 50%;
@@ -575,7 +625,8 @@ $width-container: 85%;
                 .title-contatti {
                     font-family: $primary-font-strano;
                     font-weight: 700;
-                    font-size: 42px;
+                    font-size: 42px!important;
+                    text-align: center;
                 }
             }
         }

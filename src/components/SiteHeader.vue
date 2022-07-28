@@ -11,12 +11,18 @@
             <MenuHeader></MenuHeader>
           </div>
         </div>
-        <!-- /#header-menu -->
         <div
           class="col-md-8 d-flex justify-content-center vinile-wrap-container"
         >
-          <VinileAnimation></VinileAnimation>
+          <VinileAnimation2></VinileAnimation2>
         </div>
+
+        <!-- /#header-menu -->
+        <!-- <div
+          class="col-md-8 d-flex justify-content-center vinile-wrap-container"
+        >
+          <VinileAnimation></VinileAnimation>
+        </div> -->
       </div>
     </div>
   </header>
@@ -25,12 +31,14 @@
 <script>
 import TopHeader from "./TopHeader.vue";
 import MenuHeader from "./MenuHeader.vue";
-import VinileAnimation from "./VinileAnimation.vue";
+/* import VinileAnimation from "./VinileAnimation.vue"; */
+import VinileAnimation2 from "./VinileAnimation2.vue";
 export default {
   components: {
     TopHeader,
     MenuHeader,
-    VinileAnimation,
+    /* VinileAnimation, */
+    VinileAnimation2
   },
 };
 </script>

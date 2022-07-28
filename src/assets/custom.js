@@ -1,14 +1,14 @@
-import { gsap /* Power1 */ /* , Bounce */ , /* Linear */ } from "gsap";
+import { gsap /* Power1 */ /* , Bounce */ , Linear } from "gsap";
 import { TimelineMax } from "gsap/gsap-core";
 import jQuery from "jquery";
 import { TweenMax } from "gsap/gsap-core";
-/* import { Draggable } from "gsap/Draggable"; */
-/* import { TweenLite, TimelineLite } from 'gsap'; */
+import { Draggable } from "gsap/Draggable";
+import { TweenLite, TimelineLite } from 'gsap';
 
 function init() {
     gsap.registerPlugin("TweenMax");
     gsap.registerPlugin("TimelineMax");
-    /* gsap.registerPlugin(Draggable); */
+    gsap.registerPlugin(Draggable);
     consoleLogAuthor();
     animateMenu();
     /* controlVinile(); */
@@ -26,7 +26,7 @@ function init() {
     toggleMenuMobile();
     pageLoader();
     counter();
-    /* porcatroia(); */
+    porcatroia();
     gsap.config({
         nullTargetWarn: false,
     });
@@ -246,27 +246,27 @@ function counter() {
     }
 }
 
-/* function porcatroia() {
-    var nav6 = jQuery('#change').children('.holder').each(function(i) {
+function porcatroia() {
+    var nav6 = jQuery('.servizi-wrap').children('.servizi').each(function(i) {
         TweenLite.set(this, { rotation: 30 * i });
     }).end();
 
     var tl = new TimelineLite({ paused: true });
-    var nav = document.getElementById('change')
+    var nav = jQuery('.servizi-wrap')
 
-    var gorilla = gsap.to(nav, 60, { rotation: "360", ease: Linear.easeNone, repeat: -1 });
-
-
+    var gorilla = gsap.to(nav, 10, { rotation: "360", ease: Linear.easeNone, repeat: -1 });
 
 
-    jQuery(document).on("mouseenter", ".holder img", function() {
+
+
+    jQuery(document).on("mouseenter", ".servizi img", function() {
         tl.pause();
-    }).on("mouseleave", ".holder a", function() {
+    }).on("mouseleave", ".servizi a", function() {
         tl.play();
     });
 
 
-    const draggable = Draggable.create("#change", {
+    const draggable = Draggable.create(".servizi-wrap", {
         type: "rotation",
         inertia: true,
         onDrag: function() {
@@ -274,5 +274,5 @@ function counter() {
         }
     });
     console.log(nav6, draggable);
-} */
+}
 jQuery(document).ready(init);
