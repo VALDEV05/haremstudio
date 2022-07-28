@@ -14,9 +14,7 @@
 *    7.1 - Hero
 *    7.2 - Newsletter
 *    7.2 - Instagram Feed
-*  8.0 - Category Page
-*  9.0 - Product Page
-*  10.0 - About Page
+*  8.0 - Page Loader 
 *
 ***
 */
@@ -265,7 +263,7 @@ $width-container: 85%;
                 transform: translateY(-50%);
                 .servizi-wrap {
                     position: relative;
-                    z-index: 9999;
+                    z-index: 99;
                     #servizio-01,
                     #servizio-02,
                     #servizio-03 {
@@ -307,18 +305,6 @@ $width-container: 85%;
                         opacity: 0;
                     }
                 }
-                .controlli-wrap {
-                    display: none !important;
-                    z-index: 99999;
-                    position: absolute;
-                    top: 50%;
-                    left: 5%;
-                    transform: translateY(-50%);
-                    height: 150px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                }
             }
         }
     }
@@ -341,15 +327,6 @@ $width-container: 85%;
                     .container-text-wrap {
                         height: 100%;
                         width: 80%;
-                        /* border: 1px solid red;
-                        position: relative;
-                        .line {
-                            height: 200px;
-                            width: 1px;
-                            background-color: #fff;
-                            display: block;
-                            position: absolute;
-                        } */
                         .container-text {
                             padding: calc($height-top-header + 4px) 0;
                             display: flex;
@@ -547,6 +524,42 @@ $width-container: 85%;
                 }
             }
         }
+    }
+}
+
+
+/* ==========================================================================
+  8.0 - Page Loader
+   ========================================================================== */
+
+#page-loader {
+    height: 100vh;
+    width: 100vw;
+    background-color: $black;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #logo {
+        max-width: 250px;
+        max-height: 250px;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .counter {
+        margin-top: 10px;
+        color: $white;
+        .counter-number {
+            color: $white;
+        }
+    }
+    &.rimuovi {
+        transform: translateY(-100vh);
+        transition: all 2s;
     }
 }
 

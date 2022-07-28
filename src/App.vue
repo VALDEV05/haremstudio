@@ -1,18 +1,22 @@
 <template>
+  <PageLoader></PageLoader>
+  <!-- /#PageLoader -->
   <SiteHeader></SiteHeader>
   <!-- /#site-header -->
   <SiteMain></SiteMain>
   <!-- /#site-main -->
   <SiteFooter></SiteFooter>
   <!-- /#site-footer -->
-  <SiteMenuLeft></SiteMenuLeft>
+  <SiteMenuMobile></SiteMenuMobile>
+  <!-- /#site-footer-left -->
 </template>
 
 <script>
+import PageLoader from "./components/PageLoader.vue"
 import SiteHeader from "./components/SiteHeader.vue";
 import SiteMain from "./components/SiteMain.vue";
 import SiteFooter from "./components/SiteFooter.vue";
-import SiteMenuLeft from "./components/SiteMenuLeft.vue"
+import SiteMenuMobile from "./components/SiteMenuLeft.vue"
 
 export default {
   name: "App",
@@ -20,7 +24,8 @@ export default {
     SiteHeader,
     SiteMain,
     SiteFooter,
-    SiteMenuLeft
+    SiteMenuMobile,
+    PageLoader
   },
 };
 </script>

@@ -1,4 +1,4 @@
-import { gsap, /* Power1 */ /* , Bounce */ } from "gsap";
+import { gsap /* Power1 */ /* , Bounce */ } from "gsap";
 import { TimelineMax } from "gsap/gsap-core";
 import jQuery from "jquery";
 import { TweenMax } from "gsap/gsap-core";
@@ -21,7 +21,8 @@ function init() {
     keywordAnimation();
     draggableImg();
     toggleMenuMobile();
-
+    pageLoader();
+    counter();
     gsap.config({
         nullTargetWarn: false,
     });
@@ -173,15 +174,15 @@ function parallaxIt(e, target, movement, container) {
 }
 /* Function to blog drag on element */
 function draggableImg() {
-    jQuery('img').mousedown(() => {
+    jQuery("img").mousedown(() => {
         return false;
     });
-    jQuery('svg').mousedown(() => {
+    jQuery("svg").mousedown(() => {
         return false;
     });
-    jQuery('a').mousedown(() => {
+    jQuery("a").mousedown(() => {
         return false;
-    })
+    });
 }
 /* Function keywordAnimation() */
 function keywordAnimation() {
@@ -212,9 +213,28 @@ function keywordAnimation() {
     }
 }
 
+function pageLoader() {
+    var pageLoader = jQuery("#page-loader");
+    console.log(pageLoader);
+    /* setTimeout(() => {
+            pageLoader.addClass('rimuovi');
 
+        }, 5000); */
+}
 
+function counter() {
+    var span = jQuery(".counter-number");
+    let i = 0;
+    while (i <= 100) {
+        task(i);
+        i++;
+    }
 
-
+    function task(i) {
+        setTimeout(function() {
+            span.text(i);
+        }, 70 * i);
+    }
+}
 
 jQuery(document).ready(init);
