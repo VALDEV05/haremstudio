@@ -203,6 +203,18 @@ function draggableImg() {
     jQuery("a").mousedown(() => {
         return false;
     });
+    jQuery("h1").mousedown(() => {
+        return false;
+    });
+    jQuery("p").mousedown(() => {
+        return false;
+    });
+    jQuery("h2").mousedown(() => {
+        return false;
+    });
+    jQuery("h3").mousedown(() => {
+        return false;
+    });
 }
 /* Function keywordAnimation() */
 function keywordAnimation() {
