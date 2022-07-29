@@ -311,13 +311,21 @@ $width-container: 85%;
                 .servizi-wrap {
                     position: relative;
                     z-index: 99;
-                    #servizio-01,
-                    #servizio-02,
-                    #servizio-03 {
+                    .servizio {
                         position: absolute;
                         top: 50%;
-                        left: -75%;
-                        transform: translate(50%, -50%);
+                        left: -60%;
+                        transform: translate(50%, -50%) scale(0.7);
+                        &#servizio-02 {
+                            top: 0%;
+                            left: -15%;
+                            transform: translate(50%, -50%) scale(0.7);
+                        }
+                        &#servizio-03 {
+                            top: 100%;
+                            left: -15%;
+                            transform: translate(50%, -50%) scale(0.7);
+                        }
                         .testo-servizio {
                             width: fit-content;
                             position: absolute;
@@ -346,10 +354,6 @@ $width-container: 85%;
                                 color: $white;
                             }
                         }
-                    }
-                    #servizio-02,
-                    #servizio-03 {
-                        opacity: 0;
                     }
                 }
             }
@@ -625,7 +629,7 @@ $width-container: 85%;
                 .title-contatti {
                     font-family: $primary-font-strano;
                     font-weight: 700;
-                    font-size: 42px!important;
+                    font-size: 42px !important;
                     text-align: center;
                 }
             }
@@ -799,7 +803,7 @@ $width-container: 85%;
 
 @media (max-width: 575.98px) {
     .menu-top-header.mobile {
-        display: flex!important;
+        display: flex !important;
         &>div {
             width: fit-content;
         }

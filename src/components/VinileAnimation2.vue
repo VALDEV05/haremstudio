@@ -14,12 +14,12 @@
       </div>
       <div id="servizio-02" class="servizio">
         <div class="testo-servizio">
-          <div class="numero">01</div>
+          <div class="numero">02</div>
           <div class="nome">servizi</div>
         </div>
         <img src="../assets/upload/img/harem_servizio-02.jpg" alt="" />
         <div class="titolo-servizio">
-          <a href="#">Recording Session</a>
+          <a href="#">Produzione inediti</a>
         </div>
       </div>
       <div id="servizio-03"  class="servizio">
@@ -29,7 +29,7 @@
         </div>
         <img src="../assets/upload/img/harem_servizio-03.jpg" alt="" />
         <div class="titolo-servizio">
-          <a href="#">Recording Session</a>
+          <a href="#">Mixing e Master</a>
         </div>
       </div>
     </div>

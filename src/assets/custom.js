@@ -1,9 +1,10 @@
-import { gsap /* Power1 */ /* , Bounce */ , Linear } from "gsap";
+import { gsap /* Power1 */ /* , Bounce */ , /* Linear */ } from "gsap";
 import { TimelineMax } from "gsap/gsap-core";
 import jQuery from "jquery";
 import { TweenMax } from "gsap/gsap-core";
 import { Draggable } from "gsap/Draggable";
-import { TweenLite, TimelineLite } from 'gsap';
+/* import { TweenLite, TimelineLite } from 'gsap'; */
+import { setTimeout } from "core-js";
 
 function init() {
     gsap.registerPlugin("TweenMax");
@@ -11,7 +12,6 @@ function init() {
     gsap.registerPlugin(Draggable);
     consoleLogAuthor();
     animateMenu();
-    /* controlVinile(); */
     scrolltToTop();
     sendEmailHarem();
     redirectGoogleMaps();
@@ -26,7 +26,6 @@ function init() {
     toggleMenuMobile();
     pageLoader();
     counter();
-    porcatroia();
     gsap.config({
         nullTargetWarn: false,
     });
@@ -227,7 +226,9 @@ function pageLoader() {
     var pageLoader = jQuery("#page-loader");
     setTimeout(() => {
         pageLoader.addClass('rimuovi');
-
+        setTimeout(() => {
+            /* AnimazioneVinile(); */
+        }, 3000);
     }, 3000);
 }
 
@@ -246,7 +247,7 @@ function counter() {
     }
 }
 
-function porcatroia() {
+/* function AnimazioneVinile() {
     var nav6 = jQuery('.servizi-wrap').children('.servizi').each(function(i) {
         TweenLite.set(this, { rotation: 30 * i });
     }).end();
@@ -254,7 +255,7 @@ function porcatroia() {
     var tl = new TimelineLite({ paused: true });
     var nav = jQuery('.servizi-wrap')
 
-    var gorilla = gsap.to(nav, 10, { rotation: "360", ease: Linear.easeNone, repeat: -1 });
+    var gorilla = gsap.to(nav, 30, { rotation: "360", ease: Linear.easeNone, repeat: -1 });
 
 
 
@@ -274,5 +275,5 @@ function porcatroia() {
         }
     });
     console.log(nav6, draggable);
-}
+} */
 jQuery(document).ready(init);
