@@ -1,9 +1,9 @@
-import { gsap /* Power1 */ /* , Bounce */ , /* Linear */ } from "gsap";
+import { gsap /* Power1 */ /* , Bounce */ , Linear } from "gsap";
 import { TimelineMax } from "gsap/gsap-core";
 import jQuery from "jquery";
 import { TweenMax } from "gsap/gsap-core";
 import { Draggable } from "gsap/Draggable";
-/* import { TweenLite, TimelineLite } from 'gsap'; */
+import { TweenLite, TimelineLite } from 'gsap';
 import { setTimeout } from "core-js";
 
 function init() {
@@ -19,6 +19,16 @@ function init() {
         ".vinile-wrap-container",
         "#servizio-01",
         "#section-servizio-01"
+    );
+    redirectSection(
+        ".vinile-wrap-container",
+        "#servizio-02",
+        "#section-servizio-02"
+    );
+    redirectSection(
+        ".vinile-wrap-container",
+        "#servizio-03",
+        "#section-servizio-03"
     );
     redirectSection("#header-menu", ".chi-siamo-menu", "#chi-siamo");
     keywordAnimation();
@@ -227,7 +237,7 @@ function pageLoader() {
     setTimeout(() => {
         pageLoader.addClass('rimuovi');
         setTimeout(() => {
-            /* AnimazioneVinile(); */
+            AnimazioneVinile();
         }, 3000);
     }, 3000);
 }
@@ -247,15 +257,15 @@ function counter() {
     }
 }
 
-/* function AnimazioneVinile() {
-    var nav6 = jQuery('.servizi-wrap').children('.servizi').each(function(i) {
+function AnimazioneVinile() {
+    jQuery('.servizi-wrap').children('.servizi').each(function(i) {
         TweenLite.set(this, { rotation: 30 * i });
     }).end();
 
     var tl = new TimelineLite({ paused: true });
     var nav = jQuery('.servizi-wrap')
 
-    var gorilla = gsap.to(nav, 30, { rotation: "360", ease: Linear.easeNone, repeat: -1 });
+    var vinileRotation = gsap.to(nav, 30, { rotation: "360", ease: Linear.easeNone, repeat: -1 });
 
 
 
@@ -267,13 +277,13 @@ function counter() {
     });
 
 
-    const draggable = Draggable.create(".servizi-wrap", {
+
+    Draggable.create(".servizi-wrap", {
         type: "rotation",
         inertia: true,
         onDrag: function() {
-            gorilla.pause
+            vinileRotation.pause
         }
     });
-    console.log(nav6, draggable);
-} */
+}
 jQuery(document).ready(init);

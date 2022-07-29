@@ -325,6 +325,11 @@ $width-container: 85%;
                             top: 100%;
                             left: -15%;
                             transform: translate(50%, -50%) scale(0.7);
+                            .testo-servizio {
+                                .nome {
+                                    margin-top: -62px;
+                                }
+                            }
                         }
                         .testo-servizio {
                             width: fit-content;
