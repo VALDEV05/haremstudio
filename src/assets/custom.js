@@ -31,6 +31,7 @@ function init() {
         "#section-servizio-03"
     );
     redirectSection("#header-menu", ".chi-siamo-menu", "#chi-siamo");
+    redirectSection("#header-menu", ".contatti-menu", "#contatti");
     keywordAnimation();
     draggableImg();
     toggleMenuMobile();
@@ -256,6 +257,7 @@ function counter() {
         }, 30 * i);
     }
 }
+
 
 function AnimazioneVinile() {
     jQuery('.servizi-wrap').children('.servizi').each(function(i) {
