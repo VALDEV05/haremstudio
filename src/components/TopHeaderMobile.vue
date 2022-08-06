@@ -20,55 +20,44 @@
     <!-- /#menu-item-3 -->
     <div id="hambuerger-menu">
       <svg
+        id="Livello_2"
         xmlns="http://www.w3.org/2000/svg"
-        width="58.045"
-        height="51.959"
-        viewBox="0 0 58.045 51.959"
+        viewBox="0 0 37.09 37.09"
       >
-        <g
-          id="Raggruppa_23"
-          data-name="Raggruppa 23"
-          transform="translate(-348.972 -23.995)"
-        >
-          <path
-            id="Tracciato_1"
-            data-name="Tracciato 1"
-            d="M1014.487,4508.345c-.893.791-1.584.2-3.847,9.259s-4.2,16.253-4.2,16.253a15.725,15.725,0,0,0,9.211,15.491c10.442,4.915,23.4,8.58,33.771,7.052s13.629-10.448,12.867-17.031-11.728-29.257-25.65-31.482S1015.381,4507.555,1014.487,4508.345Z"
-            transform="translate(-656.392 -4481.839)"
-            fill="none"
-            stroke="#fff"
-            stroke-width="2"
-          />
-          <line
-            id="Linea_1"
-            data-name="Linea 1"
-            x2="29.036"
-            transform="translate(363.482 42.657)"
-            fill="none"
-            stroke="#fff"
-            stroke-linecap="round"
-            stroke-width="2"
-          />
-          <line
-            id="Linea_2"
-            data-name="Linea 2"
-            x2="29.036"
-            transform="translate(363.482 49.957)"
-            fill="none"
-            stroke="#fff"
-            stroke-linecap="round"
-            stroke-width="2"
-          />
-          <line
-            id="Linea_3"
-            data-name="Linea 3"
-            x2="29.036"
-            transform="translate(363.482 57.257)"
-            fill="none"
-            stroke="#fff"
-            stroke-linecap="round"
-            stroke-width="2"
-          />
+        <g id="Livello_1-2">
+          <g id="Livello_2-2">
+            <g id="Livello_1-2">
+              <path
+                d="M22.59,0H14.51C6.5,0,0,6.5,0,14.51H0v8.08c0,8.01,6.5,14.5,14.51,14.5h8.08c8.01,0,14.49-6.49,14.5-14.5V14.51c0-8.01-6.49-14.5-14.5-14.51Z"
+              />
+              <g id="Livello_1-2-2">
+                <line
+                  id="Linea_1"
+                  class="hamburger-icon"
+                  x1="6.41"
+                  y1="12.03"
+                  x2="31.39"
+                  y2="12.03"
+                />
+                <line
+                  id="Linea_2"
+                  class="hamburger-icon"
+                  x1="6.41"
+                  y1="18.48"
+                  x2="31.39"
+                  y2="18.48"
+                />
+                <line
+                  id="Linea_3"
+                  class="hamburger-icon"
+                  x1="6.41"
+                  y1="24.93"
+                  x2="31.39"
+                  y2="24.93"
+                />
+              </g>
+            </g>
+          </g>
         </g>
       </svg>
     </div>
@@ -90,5 +79,11 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.hamburger-icon {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-width: 2px;
+}
 </style>

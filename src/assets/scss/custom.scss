@@ -107,6 +107,7 @@ p {
     width: 90%;
     padding-right: 15px;
     padding-left: 15px;
+    margin: 0 auto;
 }
 
 .banner-transparent {
@@ -135,7 +136,7 @@ svg {
 }
 
 ::selection {
-    background-color: rgba(0, 0, 0, 0)
+    background-color: rgba(0, 0, 0, 0);
 }
 
 
@@ -185,6 +186,10 @@ $width-container: 85%;
         position: fixed;
         display: flex;
         z-index: 9;
+        .col-full {
+            display: flex;
+            align-items: center;
+        }
         .menu-top-header {
             display: flex;
             justify-content: space-between;
@@ -523,9 +528,9 @@ $width-container: 85%;
 
 #site-footer {
     background-color: $black;
-    height: 250px;
     position: relative;
     margin-top: 128px;
+    padding: 32px 0;
     #back-top {
         .icona {
             position: absolute;
@@ -546,6 +551,9 @@ $width-container: 85%;
         height: 100%;
         .row {
             height: 100%;
+            &.row-footer-mobile {
+                display: none;
+            }
         }
         .row>* {
             height: 100%;
@@ -805,16 +813,140 @@ $width-container: 85%;
         }
         /* top-header */
     }
+    #site-footer {
+        .col-full {
+            .row {
+                &.row-footer-desktop {
+                    display: none;
+                }
+                &.row-footer-mobile {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 
 
 /* Small applies to x-small devices (portrait phones, less than 576px) */
 
 @media (max-width: 575.98px) {
+    .col-full {
+        width: 95%;
+        max-width: 95%;
+        margin: 0 auto;
+    }
     .menu-top-header.mobile {
         display: flex !important;
+        width: 95%;
+        margin: 0 auto;
         &>div {
             width: fit-content;
+        }
+    }
+    #site-header {
+        #main-header {
+            .row {
+                &>#header-menu {
+                    margin: 32px auto;
+                    #header-menu {
+                        display: none;
+                    }
+                }
+            }
+            .vinile-wrap-container {
+                .vinile-wrap2 {
+                    right: -100%;
+                    top: 50%;
+                    transform: translateY(-50%) scale(0.7);
+                }
+            }
+        }
+    }
+    #site-main {
+        margin-top: 82px;
+        #chi-siamo {
+            .container-fluid {
+                .row {
+                    .col-md-6 {
+                        &:first-child {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        section.servizio {
+            .immagine-servizio {
+                img {
+                    height: 250px;
+                }
+                .nome-servizio {
+                    .numero {
+                        font-size: 100px;
+                    }
+                    .name {
+                        font-size: 102px;
+                        margin-top: -62px;
+                    }
+                }
+            }
+            .descrizione-servizio {
+                .titolo-servizio {
+                    .sottotitolo {
+                        font-size: 30px !important;
+                    }
+                }
+            }
+            .corpo-descrizione {
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    #site-footer {
+        #back-top {
+            &>svg {
+                top: -28%;
+                max-width: 30%;
+            }
+            .icona {
+                top: -5%;
+            }
+        }
+        .col-full {
+            .row {
+                &.row-footer-mobile {
+                    .logo-script {
+                        display: flex;
+                        justify-content: center;
+                        img {
+                            max-width: 90%;
+                        }
+                    }
+                    .legalPages {
+                        width: 100%;
+                        ul {
+                            display: flex;
+                            width: 100%;
+                            align-items: center;
+                            justify-content: space-around;
+                        }
+                    }
+                    .legal-contact {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-around;
+                        & * {
+                            font-size: 10px;
+                            color: white;
+                            opacity: .5;
+                        }
+                    }
+                }
+            }
         }
     }
 }

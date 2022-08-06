@@ -7,10 +7,6 @@
         <li>
             <a href="#">Cookie Policy</a>
         </li>
-        <li>
-            Piva 74629566311
-        </li>
-
     </ul>
 </div>
 </template>

@@ -125,6 +125,8 @@ function animateMenu() {
 }
 /* ScrollToTop */
 function scrolltToTop() {
+    var button = jQuery('.logo-script');
+    button.css('cursor', 'pointer');
     jQuery("#back-top").click(function() {
         jQuery("html, body").animate({
                 scrollTop: 0,
@@ -134,6 +136,14 @@ function scrolltToTop() {
         return false;
     });
     jQuery(".back-top").click(function() {
+        jQuery("html, body").animate({
+                scrollTop: 0,
+            },
+            "slow"
+        );
+        return false;
+    });
+    button.click(function() {
         jQuery("html, body").animate({
                 scrollTop: 0,
             },
@@ -296,7 +306,7 @@ function AnimazioneVinile() {
         type: "rotation",
         inertia: true,
         onDrag: function() {
-            vinileRotation.pause
+            vinileRotation.pause();
         }
     });
 }

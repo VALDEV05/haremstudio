@@ -35,44 +35,24 @@
       </div>
     </div>
     <div class="col-full">
-      <div class="row">
-        <div class="col-10 offset-md-1">
-          <div class="row w-100">
-            <div class="col-2 back-top">
-              <img src="../assets/upload/img/logo_small-white.png" alt="" />
-            </div>
-            <div class="col-2">
-              <MenuHeader></MenuHeader>
-            </div>
-            <div class="col-4">
-              <LeftMenu></LeftMenu>
-            </div>
-            <div class="col-4">
-              <LegalPageMenu></LegalPageMenu>
-            </div>
-          </div>
-        </div>
-      </div>
+      <RowFooterDesktop></RowFooterDesktop> 
+      <RowFooterMobile></RowFooterMobile>
     </div>
   </div>
   <!-- /#site-footer -->
 </template>
 
 <script>
-import MenuHeader from "./MenuHeader.vue";
-import LeftMenu from "./LeftMenu.vue";
-import LegalPageMenu from "./LegalPageMenu.vue";
+import RowFooterDesktop from "./row-footer-desktop.vue"
+import RowFooterMobile from "./row-footer-mobile.vue"
 export default {
   components: {
-    MenuHeader,
-    LeftMenu,
-    LegalPageMenu,
-  },
+    RowFooterDesktop,
+    RowFooterMobile
+},
 };
 </script>
 
 <style>
-.cls-footer {
-  fill: #121212;
-}
+
 </style>
