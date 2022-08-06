@@ -301,13 +301,15 @@ function AnimazioneVinile() {
     });
 
 
-
-    Draggable.create(".servizi-wrap", {
-        type: "rotation",
-        inertia: true,
-        onDrag: function() {
-            vinileRotation.pause();
-        }
-    });
+    var pageWidth = jQuery(window).width();
+    if (pageWidth > 768) {
+        Draggable.create(".servizi-wrap", {
+            type: "rotation",
+            inertia: true,
+            onDrag: function() {
+                vinileRotation.pause();
+            }
+        });
+    }
 }
 jQuery(document).ready(init);
