@@ -37,8 +37,15 @@ function init() {
     toggleMenuMobile();
     pageLoader();
     counter();
+    ifMobile('#site-main');
+    ifMobile('#site-footer');
+    ifMobile('body');
     gsap.config({
         nullTargetWarn: false,
+    });
+    console.clear();
+    gsap.defaults({
+        ease: "none"
     });
 }
 
@@ -300,14 +307,27 @@ function AnimazioneVinile() {
         tl.play();
     });
 
+    var pageWidth = jQuery(window).width();
+    if (pageWidth > 768) {
+        Draggable.create(".servizi-wrap", {
+            type: "rotation",
+            inertia: true,
+            onDrag: function() {
+                vinileRotation.pause();
+            }
+        });
+    }
 
 
-    Draggable.create(".servizi-wrap", {
-        type: "rotation",
-        inertia: true,
-        onDrag: function() {
-            vinileRotation.pause();
-        }
-    });
+
+}
+
+function ifMobile(container) {
+    var element = jQuery(container);
+    var pageWidth = jQuery(window).width();
+
+    if (pageWidth < 768) {
+        element.addClass('device-mobile');
+    }
 }
 jQuery(document).ready(init);
