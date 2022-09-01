@@ -307,27 +307,14 @@ function AnimazioneVinile() {
         tl.play();
     });
 
-    var pageWidth = jQuery(window).width();
-    if (pageWidth > 768) {
-        Draggable.create(".servizi-wrap", {
-            type: "rotation",
-            inertia: true,
-            onDrag: function() {
-                vinileRotation.pause();
-            }
-        });
-    }
 
 
-
-}
-
-function ifMobile(container) {
-    var element = jQuery(container);
-    var pageWidth = jQuery(window).width();
-
-    if (pageWidth < 768) {
-        element.addClass('device-mobile');
-    }
+    Draggable.create(".servizi-wrap", {
+        type: "rotation",
+        inertia: true,
+        onDrag: function() {
+            vinileRotation.pause();
+        }
+    });
 }
 jQuery(document).ready(init);
