@@ -16,6 +16,9 @@
         </div>
       </div>
     </div>
+    <div class="col-12 col-bottom">
+     <p>Powered by <a href="https://valeriocorda.com">valeriocorda.com</a> | P.IVA 16189901008</p>
+    </div>
   </div>
 </template>
 

@@ -13,6 +13,7 @@
       <row class="legal-contact">
         <div>P.IVA 16189901008</div>
         <div>Via Antonio Maria Lorgna 22</div>
+        <div>Powered by <a href="https://valeriocorda.com">valeriocorda.com</a></div>
       </row>
     </div>
   </div>
