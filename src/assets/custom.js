@@ -317,4 +317,13 @@ function AnimazioneVinile() {
         }
     });
 }
+
+function ifMobile(container) {
+    var element = jQuery(container);
+    var pageWidth = jQuery(window).width();
+
+    if (pageWidth < 768) {
+        element.addClass('device-mobile');
+    }
+}
 jQuery(document).ready(init);
